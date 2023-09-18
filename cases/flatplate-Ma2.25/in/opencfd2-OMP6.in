@@ -1,0 +1,43 @@
+ $control_opencfd
+ nx_global=2193
+ ny_global=72
+ nz_global=128
+ npx0=32
+ npy0=1
+ npz0=2
+ Iflag_Gridtype=10           ! 1D-plane type mesh
+ Scheme_Invis="OMP6"
+ Scheme_Vis="CD6"
+ Ma=2.25 
+ Re=635000.0
+ Ref_Amu_T0=169.44
+ Istep_show=10
+ Istep_save=10000
+ dt=0.0002
+ End_time=20.0
+ IF_Scheme_Character=0
+ Iperiodic_Z=1
+ Periodic_KSpan= 0., 0., 0.175
+ BoundaryCondition="BC_BOUNDARYLAYER"
+ !   BcData_inlet  BcData_upper bc_upper_nonref  bc_outlet Tw  Wall_Xinit  bc_dis_type bc_dis_A  bc_dis_Xbegin  bc_dis_Xend  bc_dis_mt bc_dis_mz bc_dis_ZL bc_dis_freq 
+ BC_Para=1,           0,          0,               0,      1.9,  0.,          1,         0.04,    4.5             5.0          5           10       0.175   7.854
+ ANA_Number=0
+ ANA_Para(:,1)=100,      10, 10000
+ !             Kana   Kstep_ana  Kstep_save
+ $end
+ 
+!--------------define of BC_Para -------------------
+!    BcData_inlet=nint(Para%BC_para(1))      ! inlet: (0 free-stream;  1 1d data;  2 2d data)
+!	 BcData_upper=nint(Para%Bc_para(2))      ! upper boundary: (0 free-stream, 1 1d data ,  2 2d data)
+!	 bc_upper_nonref=nint(Para%Bc_para(3))   ! upper boundary: 0 auto,  1 Non-Reflection,  2 Dirichlet 
+!	 bc_outlet=nint(Para%Bc_para(4))         ! outlet: 0 Non-Reflection,   1 1st order extrapolation,  2 2nd order extrapolation
+!    Tw=Para%Bc_para(5)                      ! wall temperature
+!	 Wall_Xinit=Para%Bc_para(6)              ! x location of the wall leading 
+!	 bc_dis_type=nint(Para%Bc_para(7))     ! wall disturbance type (0 none ;  1 multi-wave blow-and-suction, Ref: Rai MM, AIAA 95-0583)
+!	 bc_dis_A=Para%Bc_para(8)              ! Amplitude of wall disturbance     
+!	 bc_dis_Xbegin=Para%Bc_para(9)	       ! Initial location of wall disturbance
+!	 bc_dis_Xend=Para%Bc_para(10)          ! End location of wall disturbance
+!	 bc_dis_mt=nint(Para%Bc_para(11))     ! multi-frequency
+!	 bc_dis_mz=nint(Para%Bc_para(12))     ! multi-wavenumber
+!	 bc_dis_ZL=Para%Bc_para(13)           ! Spanwise Length
+!    bc_dis_freq=Para%Bc_para(14)         ! base frequancy of disturbance  
