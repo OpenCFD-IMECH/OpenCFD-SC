@@ -11,10 +11,9 @@ and the GPU heterogeneous parallel high-precision computation software OpenCFD-S
 The developers have made this software available for use by scientific research and engineering users.
 
 code change log
+
  2021-03-15: OpenCFD Ver2.0
- 
- 2021-03-17: OpenCFD Ver 2.0a, New feature in shock sensor and hybrid schemes
- 
+  2021-03-17: OpenCFD Ver 2.0a, New feature in shock sensor and hybrid schemes
  2021-03-22: OpenCFD Ver 2.0b, a bug in du_inviscous_Character is removed Local Lax-Friedrichs splitting is added
  
  2021-04-05: OpenCFD Ver 2.0c, a bug in read-flate.f90 is remove boundary condition (random disturbance) is added in OCFD_Bc_boundarylayers.f90
