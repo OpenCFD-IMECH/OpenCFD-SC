@@ -1,7 +1,0 @@
-# V3.0
-nx    ny    nz
-2500   220  240 
-beta  High     hy_wall1   hy_wall2  Lz 
-34.   55.      0.01       0.01      24.0
-XL_conner,nx_conner,XL_inlet,nx_inlet,hx_inlet,nx_buff,alfax_buff
-50.         1200       400.      1120    0.5     180    1.01     
